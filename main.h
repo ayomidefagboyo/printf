@@ -9,7 +9,7 @@
  * struct print - struct for printer functions
  * @type_arg: identifier
  * @f: pointer to a printer functions
- *
+ * Authors: Fagboyo ayomide, Kayode Oluwafemi
  * Description: struct that stores pointers to a
  * printer functions.
  */
