@@ -32,6 +32,6 @@ int _printf(const char *format, ...)
 	my_print = _print_specifier(format, formatchar, args);
 
 	va_end(args);
-
+	
 	return (my_print);
 }
