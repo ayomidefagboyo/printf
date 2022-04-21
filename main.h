@@ -1,36 +1,32 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
-#include <unistd.h>
 #include <stdarg.h>
-#include <stdio.h>
-
 /**
- * struct convert - A convert struct
- * @type: First member
- * @func: Second member
- * Description: Define a new type struct } converter
+ * struct print - structure for printing various types
+ * @t: type to print
+ * @f: function to print
  */
-struct convert
+typedef struct print
 {
-	char *type;
-	int (*func)();
-};
+	char *t;
+	int (*f)(va_list);
+} print_t;
 
-/**
- * converter - Typedef for struct convert
- */
-typedef struct convert converter;
-
-int _putchar(int ch);
+int _putchar(char c);
 int _printf(const char *format, ...);
-int _printString(va_list myList);
-int _printFloat(va_list myList);
-int _printInt(va_list myList);
-int _printChar(va_list myList);
-int _printCent(va_list myList);
-int _print_specifier(const char *format, converter myarray[], va_list my_list);
-int _print_number(va_list args);
+int print_c(va_list c);
+int print_s(va_list s);
+int print_i(va_list i);
+int print_d(va_list d);
+int print_u(va_list u);
+int print_b(va_list b);
+int print_o(va_list o);
+int print_x(va_list x);
+int print_X(va_list X);
+int print_p(va_list p);
+int print_S(va_list S);
+int print_r(va_list r);
+int print_R(va_list R);
 
-
-#endif
+#endif  /* j cay k */
